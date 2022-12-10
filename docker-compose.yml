@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  worker1:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-1
+    environment:
+      - Application_Worker=worker1
+
+  worker2:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-2
+    environment:
+      - Application_Worker=worker2
+  
+  worker3:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-3
+    environment:
+      - Application_Worker=worker3
+  
+  worker4:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-4
+    environment:
+      - Application_Worker=worker4
+  
+  worker5:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-5
+    environment:
+      - Application_Worker=worker5
+  
+  worker6:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-6
+    environment:
+      - Application_Worker=worker6
+
+  worker7:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-7
+    environment:
+      - Application_Worker=worker7
+
+  worker8:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-8
+    environment:
+      - Application_Worker=worker8
+
+  worker9:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-9
+    environment:
+      - Application_Worker=worker9
+
+  worker10:
+    image: kafka-producer:latest
+    container_name: kafka-producer-worker-10
+    environment:
+      - Application_Worker=worker10
