@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-producer-deployment
+  labels:
+    name: kafka-producer-deploymentpod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kafka-producer-deploymentpod
+  template:
+    metadata:
+      labels:
+        app: kafka-producer-deploymentpod
+    spec:
+      containers:
+        - name: kafka-producer-worker-1
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker1
+        - name: kafka-producer-worker-2
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker2
+        - name: kafka-producer-worker-3
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker3
+        - name: kafka-producer-worker-4
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker4
+        - name: kafka-producer-worker-5
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker5
+        - name: kafka-producer-worker-6
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker6
+        - name: kafka-producer-worker-7
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker7
+        - name: kafka-producer-worker-8
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker8
+        - name: kafka-producer-worker-9
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker9
+        - name: kafka-producer-worker-10
+          image: kafka-producer:latest
+          imagePullPolicy: Always
+          env:
+            - name: Application_Worker
+              value: worker10
+    
