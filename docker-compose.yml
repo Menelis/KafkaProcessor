@@ -2,6 +2,9 @@ version: '3.8'
 
 services:
   worker1:
+    build: 
+      context: .
+      dockerfile: Dockerfile
     image: kafka-producer:latest
     container_name: kafka-producer-worker-1
     environment:
